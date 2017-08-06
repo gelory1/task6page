@@ -41,16 +41,19 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin: 0 30%;
-    border-radius: 0.25em;
+    border-radius: .3em;
     width: 40%;
+    background-color: rgb(85,168,179);
 }
 .proj1 {
     width: 50%;
+    color: #FFFFFF;
     background-color: rgb(85,168,179);
 }
 .proj2 {
     background-color: #FFFFFF;
-    border-radius: 0.25em;
+    border-radius: .3em;
+    color: rgb(95,192,205);
     z-index: 1;
     width: 50%;
     padding: 0.25em 0;
@@ -68,28 +71,40 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
 }
-label{
-    width: 100%;
-    font-size: 1em;
-    font-family: "Black fan", sans-serif;
-    color: #cccccc;
+.opt1,.opt2{
+    width: 33.33%;
+    text-align: center;
+    border-right: thin solid #cccccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
-
-.opt1,.opt2 {
-    width: 100%;
-    border-top: hidden;
-    border-bottom: hidden;
-    border-left: hidden;
+.opt3{
+    width: 33.33%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
-.opt3 {
-    width: 100%;
-    border: hidden;
+.lab{
+    width: 0;
+    height: 0;
+    border-left: .3em solid transparent;
+    border-right: .3em solid transparent;
+    border-top: .6em solid #999999;
+    float: right;
+    position: relative;
+    top: .3em;
+    right: 1em;
 }
 .row{
     padding: .5em 0 .5em .5em;
     text-align: left;
     font-family: "Black fan", sans-serif;
     color: #999999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
 .container-fluid {
     border-bottom: thin solid #cccccc;
@@ -102,8 +117,9 @@ label{
     align-items: baseline;
 }
 .date1 {
-    width: 11em;
+
     margin: 0 .5em 0 1.25em;
+    padding-right: 2em;
     font-size: 1em;
     font-family: "Black fan", sans-serif;
     white-space: nowrap;
@@ -177,9 +193,4 @@ label{
     z-index: -1;
     position: relative;
     border: hidden;
-}
-@media screen and (max-width: 400px) {
-    .row,.date{
-        font-size: 40%;
-    }
 }
